@@ -1,85 +1,107 @@
-" ========== General ==========
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" Use Vim settings instead of Vi settings
-set nocompatible
-set shell=bash
-set backspace=indent,eol,start "make backspace behave in a sane manner.
-set encoding=utf-8 "set default encoding to UTF-8
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-" Change the leader. Must be put before the vundle plugins load (if there are any)
-"let mapleader=","
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
-" ========== Appearance ==========
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+" Git plugin not hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+" Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+" Plugin 'ascenator/L9', {'name': 'newL9'}
+Plugin 'flazz/vim-colorschemes'
+Plugin 'tpope/vim-surround'
 
-set t_Co=256 "terminal color scheme
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+" filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
-syntax on "switch on syntax highlighting
+set number
+syntax on
+set hidden
+set wildmenu
+set showcmd
+set hlsearch
+set ignorecase
+set smartcase
+set backspace=indent,eol,start
+set autoindent
+set ruler
+set laststatus=2
+set confirm
+set visualbell
+set t_vb=
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set cursorline
+filetype indent on
+set t_Co=256
 
-"colorscheme hemisu
-"colorscheme mayansmoke
-"colorscheme solarized
+" Drop space in line endings on save
+autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
+autocmd BufWritePre *.rb normal m`:%s/\s\+$//e ``
+autocmd BufWritePre *.js normal m`:%s/\s\+$//e ``
+autocmd BufWritePre *.java normal m`:%s/\s\+$//e ``
+autocmd BufWritePre *.html normal m`:%s/\s\+$//e ``
+autocmd BufWritePre *.css normal m`:%s/\s\+$//e ``
+autocmd BufWritePre *.kt normal m`:%s/\s\+$//e ``
+autocmd BufWritePre *.xml normal m`:%s/\s\+$//e ``
+autocmd BufWritePre *.md normal m`:%s/\s\+$//e ``
+autocmd BufWritePre *.dart normal m`:%s/\s\+$//e ``
+autocmd BufWritePre *.hs normal m`:%s/\s\+$//e ``
 
-set background=dark "use dark background for Vim theme
-set number "show line number
-set laststatus=2 "display status line status
-set scrolloff=3 "minimum number of lines below the cursor
-set mousehide "hide mouse cursor
-set relativenumber "show relative line number
+syntax on
+set mousehide
+set mouse=a
+set termencoding=utf-8
+set novisualbell "Не мигать
+set t_vb=
+set backspace=indent,eol,start whichwrap+=<,>,[,]
+set showtabline=1
 
-highlight NonText ctermfg=lightgray
-highlight SpecialKey ctermfg=lightgray
-
-set list listchars=tab:▸\ ,trail:·ٰ,eol:¬ "visually display tabs, trailing spaces and ends of lines
-
-set showmatch "highlight matching brace
-set ttyfast "faster scrolling
-
-:set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%) "change status line style
-
-" ========== Indentation ==========
-
-set expandtab "space characters when the tab is pressed
-set autoindent "copy previous line indentation when starting a new line
-set foldmethod=indent "fold by indents
-set tabstop=2 shiftwidth=2 expandtab "default indents params for all files
-filetype plugin indent on "enable file type detection and do language-dependent indenting
-
-" ========== Backup settings ==========
+set wrap
+set linebreak
 
 set nobackup
 set noswapfile
+set encoding=utf-8 " Кодировка файлов по умолчанию
+set fileencodings=utf8,cp1251
 
-" Store temporary files in a central spot
-set backup
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set clipboard=unnamed
+set ruler
 
-" ========== Search settings ==========
+set hidden
+nnoremap <C-N> :bnext<CR>
+nnoremap <C-P> :bprev<CR>
 
-set incsearch "Find the text as you type"
-set hlsearch "Highlight all search results"
-set ignorecase smartcase "make searches case-sensitive only if they contain upper-case characters
-
-" ========== Completion ==========
-
-set wildmode=longest,list "use emacs-style tab completion when selecting files, etc
-set wildmenu "make tab completion for files/buffers act like bash
-
-" ========== Mappings ==========
-
-" A set list command shortcut
-nmap <leader>l :set list!<CR>
-
-" Use ; instead of : for vim commands
-nmap ; :
-
-" Escape by double press J
-imap jj <ESC>
-
-" ========== Miscellaneous ==========
-
-" Set Iterm2 cursors
-if $TERM_PROGRAM =~ "iTerm"
-    let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
-    let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
-endif
+set visualbell t_vb=
+colorscheme OceanicNext
