@@ -7,7 +7,7 @@
 
 - link:
     ~/.bashrc: bashrc
-    # ~/.zshrc: zshrc
+    ~/.zshrc: zshrc
     ~/.vimrc: vimrc
     ~/.config: config
     ~/.config/VSCodium/User/settings.json: config/Code/User/settings.json

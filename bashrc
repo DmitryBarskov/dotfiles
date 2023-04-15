@@ -8,12 +8,22 @@ case $- in
       *) return;;
 esac
 
-# disable MacOS bash deprecation
-BASH_SILENCE_DEPRECATION_WARNING=1
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # disable MacOS bash deprecation
+    export BASH_SILENCE_DEPRECATION_WARNING=1
+fi
 
-# Configs dir
-XDG_CONFIG_HOME="$HOME/.config"
-EDITOR="vim"
+# Config dirs
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_DATA_DIRS="/usr/local/share:/usr/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_CONFIG_DIRS="/etc/xdg"
+uid="$(id -g)"
+export XDG_RUNTIME_DIR="/run/user/$uid"
+
+export EDITOR="vim"
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -23,8 +33,9 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+export HISTFILE="$XDG_STATE_HOME/history"
+export HISTSIZE=1000
+export HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -54,12 +65,12 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+	    color_prompt=yes
     else
-	color_prompt=
+	    color_prompt=
     fi
 fi
 
@@ -87,10 +98,7 @@ esac
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
 test -f "$XDG_CONFIG_HOME/aliases.sh" && . "$XDG_CONFIG_HOME/aliases.sh"
 
 # enable programmable completion features (you don't need to enable
