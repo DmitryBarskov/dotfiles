@@ -1,0 +1,51 @@
+[alias]
+  a = add
+  ad = add
+  br = branch
+  ci = commit -S
+  ic = commit -S
+  cl = clone --recurse-submodules
+  co = checkout
+  cob = checkout -b
+  codestyle = commit -S -m 'Address code style offences'
+  com = checkout main
+  cp = cherry-pick
+  dc = diff --cached
+  df = diff
+  f = fetch --all --prune
+  p = pull
+  pu = push -u
+  s = status --short
+  st = status
+unstage = restore --staged
+  download = clone --depth 1 --recurse-submodules --shallow-submodules
+  gone = ! git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D
+  gr = log --graph --pretty=format:\"%Cred%h %Cblue%ar%Creset %Cgreen%an%Creset %s %Cred%d\"
+  lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+  lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+[color]
+  ui = true
+[core]
+  excludesFile = ~/.config/git/gitignore
+  autocrlf = input
+[credential]
+  helper = osxkeychain
+[pull]
+  rebase = false
+[push]
+  default = current
+[rerere]
+  enabled = true
+[includeIf "gitdir:~/work/"]
+  path = work-profile.gitconfig
+[includeIf "gitdir:~/src/"]
+  path = personal-profile.gitconfig
+[merge]
+  tool = vimdiff
+[init]
+  defaultBranch = main
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true

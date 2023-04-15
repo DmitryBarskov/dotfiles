@@ -1,0 +1,6 @@
+--exclude=.git
+--exclude=node_modules
+--exclude=.bundle
+--exclude=cdk.out
+--exclude=public
+--exclude=vendor

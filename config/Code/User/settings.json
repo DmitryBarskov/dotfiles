@@ -1,0 +1,77 @@
+{
+  "[javascript][javascriptreact][ruby][gemfile]": {
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.tabSize": 2
+  },
+  "[markdown]": {
+      "editor.tabSize": 2
+  },
+  "[html]": {
+    "editor.tabSize": 2
+  },
+  "[typescript][typescriptreact]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "breadcrumbs.filePath": "off",
+  "debug.console.fontFamily": "editor",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.dragAndDrop": false,
+  "editor.fontFamily": "'JetBrains Mono', Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": false,
+  "editor.fontSize": 12,
+  "editor.minimap.enabled": false,
+  "editor.mouseWheelZoom": false,
+  "editor.rulers": [ 80 ],
+  "editor.suggestSelection": "first",
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.wordWrap": "on",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "extensions.ignoreRecommendations": false,
+  "files.associations": {
+    ".env.example": "shellscript",
+    ".env.local": "shellscript",
+    ".env.test": "shellscript",
+    ".env.development": "shellscript",
+    ".env": "shellscript"
+  },
+  "files.autoSave": "onFocusChange",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "git.autofetch": true,
+  "gitlens.menus": false,
+  "html.format.wrapLineLength": 80,
+  "scm.inputFontFamily": "editor",
+  "telemetry.telemetryLevel": "off",
+  "window.title": "${rootName} ${separator} ${activeEditorMedium}",
+  "git.confirmSync": false,
+  "editor.inlineSuggest.enabled": true,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "gitlens.plusFeatures.enabled": false,
+  "githubPullRequests.terminalLinksHandler": "github",
+  "scm.autoReveal": false,
+  "githubPullRequests.pullBranch": "never",
+  "explorer.autoReveal": false,
+  "editor.largeFileOptimizations": false,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "workbench.colorTheme": "Solarized Light",
+  "window.zoomLevel": 0,
+  "terminal.integrated.macOptionIsMeta": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "workbench.activityBar.visible": false,
+  "workbench.preferredDarkColorTheme": "Solarized Dark",
+  "workbench.preferredLightColorTheme": "Solarized Light",
+  "window.autoDetectColorScheme": true
+}
+

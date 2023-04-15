@@ -1,3 +1,18 @@
-- clean: []
-- link: {}
-- shell: []
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.bashrc: bashrc
+    # ~/.zshrc: zshrc
+    ~/.vimrc: vimrc
+    ~/.config: config
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - ['curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+          https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim',
+        Installing vim-plug]
+    - [vim +PlugInstall +qall, Installing vim plugins]
