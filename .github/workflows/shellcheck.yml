@@ -16,3 +16,5 @@ jobs:
         run: shellcheck -x zshrc
       - name: Lint .bashrc
         run: shellcheck -x bashrc
+      - name: Lint modules in config/
+        run: shellcheck -x *.sh
