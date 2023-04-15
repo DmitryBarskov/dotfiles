@@ -9,6 +9,12 @@
     # ~/.zshrc: zshrc
     ~/.vimrc: vimrc
     ~/.config: config
+    '~/Library/Application Support/Sublime Text 3/Packages/User':
+      create: true
+      path: sublime-text/3
+    '~/Library/Application Support/Sublime Text 4/Packages/User':
+      create: true
+      path: sublime-text/4
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
