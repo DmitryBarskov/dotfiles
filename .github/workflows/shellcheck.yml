@@ -1,0 +1,20 @@
+name: Shellcheck
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Lint .zshrc
+        run: shellcheck -x zshrc
+      - name: Lint .bashrc
+        run: shellcheck -x bashrc
+      - name: Lint modules in config/
+        run: shellcheck -x config/*.sh
