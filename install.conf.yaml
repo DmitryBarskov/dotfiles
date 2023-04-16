@@ -25,6 +25,10 @@
     '~/Library/Application Support/Sublime Text':
       if: '[ `uname` = Darwin ]'
       path: config/sublime-text-4
+    ~/Library/Preferences/com.googlecode.iterm2.plist:
+      if: '[ `uname` = Darwin ]'
+      force: true
+      path: config/iterm2/com.googlecode.iterm2.plist
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
