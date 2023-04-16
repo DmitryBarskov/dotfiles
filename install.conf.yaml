@@ -22,7 +22,7 @@
     '~/Library/Application Support/Sublime Text 3':
       if: '[ `uname` = Darwin ]'
       path: config/sublime-text-3
-    '~/Library/Application Support/Sublime Text 4':
+    '~/Library/Application Support/Sublime Text':
       if: '[ `uname` = Darwin ]'
       path: config/sublime-text-4
 
