@@ -4,3 +4,4 @@ config/VSCodium/User/settings.json
 config/sublime-text-3/*
 config/sublime-text-4/*
 config/iterm2/
+config/irb/irb_history

@@ -19,6 +19,7 @@ export EDITOR='vim'
 [ -f "$XDG_CONFIG_HOME/ruby.sh" ] && source "$XDG_CONFIG_HOME/ruby.sh"
 
 # Load autocomplete
+export FPATH="$XDG_DATA_HOME/zsh/site-functions:/usr/share/zsh/site-functions:/usr/share/zsh/5.8.1/functions"
 autoload -Uz compinit && compinit
 
 # emacs mappings
