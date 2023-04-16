@@ -11,6 +11,8 @@ alias ls='ls -a'
 alias mkdir='mkdir -pv'
 alias wget='wget -c'
 alias bc='bc -l'
+alias sed='sed -E'
+alias du='du -shc'
 
 # Some more ls aliases
 alias ll='ls -alF'
