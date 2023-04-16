@@ -8,15 +8,9 @@ export XDG_CONFIG_DIRS="/etc/xdg"
 uid="$(id -g)"
 export XDG_RUNTIME_DIR="/run/user/$uid"
 
-
-if [[ $(uname) == "Darwin" ]]; then
-    # Load brew
-    export PATH="/opt/homebrew/bin:$PATH"
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-
 export EDITOR='vim'
 
+[ -f "$XDG_CONFIG_HOME/homebrew.sh" ] && source "$XDG_CONFIG_HOME/homebrew.sh"
 [ -f "$XDG_CONFIG_HOME/aliases.sh" ] && source "$XDG_CONFIG_HOME/aliases.sh"
 [ -f "$XDG_CONFIG_HOME/macos-aliases.sh" ] && source "$XDG_CONFIG_HOME/macos-aliases.sh"
 [ -f "$XDG_CONFIG_HOME/git.zsh" ] && source "$XDG_CONFIG_HOME/git.zsh"
