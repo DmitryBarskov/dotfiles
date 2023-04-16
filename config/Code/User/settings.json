@@ -39,11 +39,11 @@
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": false,
   "files.associations": {
-    ".env": "shellscript",
     ".env.development": "shellscript",
     ".env.example": "shellscript",
     ".env.local": "shellscript",
-    ".env.test": "shellscript"
+    ".env.test": "shellscript",
+    ".env": "shellscript"
   },
   "files.autoSave": "onFocusChange",
   "files.exclude": {
