@@ -111,3 +111,12 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+[ -f "$XDG_CONFIG_HOME/aliases.sh" ] && source "$XDG_CONFIG_HOME/aliases.sh"
+[ -f "$XDG_CONFIG_HOME/macos-aliases.sh" ] && source "$XDG_CONFIG_HOME/macos-aliases.sh"
+[ -f "$XDG_CONFIG_HOME/node.sh" ] && source "$XDG_CONFIG_HOME/node.sh"
+[ -f "$XDG_CONFIG_HOME/java.sh" ] && source "$XDG_CONFIG_HOME/java.sh"
+[ -f "$XDG_CONFIG_HOME/ruby.sh" ] && source "$XDG_CONFIG_HOME/ruby.sh"
+[ -f "$XDG_CONFIG_HOME/asdf.sh" ] && source "$XDG_CONFIG_HOME/asdf.sh"
+
+export DOCKER_HIDE_LEGACY_COMMANDS=true
