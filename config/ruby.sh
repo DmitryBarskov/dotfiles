@@ -1,2 +1,4 @@
 # Load ruby
-eval "$(rbenv init -)"
+if [ -n "$(which rbenv)" ]; then
+    eval "$(rbenv init -)"
+fi
