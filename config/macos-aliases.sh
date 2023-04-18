@@ -1,7 +1,4 @@
 if [[ $(uname) == "Darwin" ]]; then
-    # shellcheck disable=SC2139
-    alias ctags="$(brew --prefix)/bin/ctags"
-
     alias mvim='open -a MacVim'
     alias assume="source assume"
 
