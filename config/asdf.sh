@@ -6,6 +6,8 @@ if [ -d "$installation_path/.asdf" ]; then
   export ASDF_DIR="$installation_path/.asdf"
   export ASDF_CONFIG_FILE="$XDG_CONFIG_HOME/asdf/.asdfrc"
 else
+  # Disabling the check, because I want this value to be defined during
+  # shell initialization, not calling the alias.
   # shellcheck disable=SC2139
   alias asdf="
     unalias asdf;

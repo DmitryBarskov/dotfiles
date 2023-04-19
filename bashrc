@@ -119,6 +119,6 @@ source "$XDG_CONFIG_HOME/asdf.sh"
 source "$XDG_CONFIG_HOME/git.bash"
 source "$XDG_CONFIG_HOME/java.bash"
 source "$XDG_CONFIG_HOME/nvm.bash"
-source "$XDG_CONFIG_HOME/ruby.sh"
+source "$XDG_CONFIG_HOME/ruby.bash"
 
 export DOCKER_HIDE_LEGACY_COMMANDS=true

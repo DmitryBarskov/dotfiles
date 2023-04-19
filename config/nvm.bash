@@ -1,4 +1,5 @@
 # this line is from https://github.com/nvm-sh/nvm#install--update-script
+# shellcheck disable=SC2155
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 
 # Load latest node installed via NVM
