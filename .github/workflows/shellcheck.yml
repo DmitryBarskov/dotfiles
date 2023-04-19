@@ -12,9 +12,5 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Lint .zshrc
-        run: shellcheck -x zshrc
-      - name: Lint .bashrc
-        run: shellcheck -x bashrc
-      - name: Lint modules in config/
-        run: shellcheck -x config/*.sh config/*.bash
+      - name: Lint configs
+        run: make lint
