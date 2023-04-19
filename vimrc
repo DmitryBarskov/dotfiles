@@ -88,5 +88,5 @@ set shell=/bin/zsh\ -l
 if has("gui_macvim")
   colorscheme gruvbox
   set background=dark
-  set guifont=Monaco:h14
+  set guifont=Monaco:h13
 endif
