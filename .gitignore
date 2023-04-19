@@ -1,7 +1,10 @@
 config/Code/*
-config/VSCodium/*
-config/VSCodium/User/settings.json
+config/configstore/
+config/git/*-profile.gitconfig
+config/irb/irb_history
+config/iterm2/
+config/nvm/
 config/sublime-text-3/*
 config/sublime-text-4/*
-config/iterm2/
-config/irb/irb_history
+config/VSCodium/*
+config/VSCodium/User/settings.json
