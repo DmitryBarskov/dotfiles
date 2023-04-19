@@ -100,10 +100,6 @@ esac
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Alias definitions.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-test -f "$XDG_CONFIG_HOME/aliases.sh" && . "$XDG_CONFIG_HOME/aliases.sh"
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -115,12 +111,14 @@ if ! shopt -oq posix; then
   fi
 fi
 
-[ -f "$XDG_CONFIG_HOME/aliases.sh" ] && source "$XDG_CONFIG_HOME/aliases.sh"
-[ -f "$XDG_CONFIG_HOME/macos-aliases.sh" ] && source "$XDG_CONFIG_HOME/macos-aliases.sh"
-[ -f "$XDG_CONFIG_HOME/git.bash" ] && source "$XDG_CONFIG_HOME/git.bash"
-[ -f "$XDG_CONFIG_HOME/node.sh" ] && source "$XDG_CONFIG_HOME/node.sh"
-[ -f "$XDG_CONFIG_HOME/java.sh" ] && source "$XDG_CONFIG_HOME/java.sh"
-[ -f "$XDG_CONFIG_HOME/ruby.sh" ] && source "$XDG_CONFIG_HOME/ruby.sh"
-[ -f "$XDG_CONFIG_HOME/asdf.sh" ] && source "$XDG_CONFIG_HOME/asdf.sh"
+# load homebrew first
+source "$XDG_CONFIG_HOME/homebrew.bash"
+
+source "$XDG_CONFIG_HOME/aliases.bash"
+source "$XDG_CONFIG_HOME/asdf.sh"
+source "$XDG_CONFIG_HOME/git.bash"
+source "$XDG_CONFIG_HOME/java.bash"
+source "$XDG_CONFIG_HOME/nvm.bash"
+source "$XDG_CONFIG_HOME/ruby.bash"
 
 export DOCKER_HIDE_LEGACY_COMMANDS=true

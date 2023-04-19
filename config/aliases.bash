@@ -26,6 +26,15 @@ if test -t 1 && test -n "$(tput colors)" && test "$(tput colors)" -ge 8; then
   alias egrep='egrep --color=auto'
 fi
 
+if [[ $(uname) == "Darwin" ]]; then
+  alias mvim='open -a MacVim'
+  alias assume="source assume"
+
+  if [[ $(arch) == "arm64" ]]; then
+    alias ibrew='arch -x86_64 /usr/local/bin/brew'
+  fi
+fi
+
 if [[ $SHELL == *"bash" ]]; then
   alias reload='source ~/.bashrc'
 elif [[ $SHELL == *"zsh" ]]; then

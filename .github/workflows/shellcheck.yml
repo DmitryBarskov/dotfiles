@@ -17,4 +17,4 @@ jobs:
       - name: Lint .bashrc
         run: shellcheck -x bashrc
       - name: Lint modules in config/
-        run: shellcheck -x config/*.sh
+        run: shellcheck -x config/*.sh config/*.bash
