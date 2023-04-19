@@ -1,7 +1,5 @@
+# this line is from https://github.com/nvm-sh/nvm#install--update-script
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-
-# Load NVM as usual (slow)
-# [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 
 # Load latest node installed via NVM
 if [[ -d "$NVM_DIR/versions/node" ]]; then

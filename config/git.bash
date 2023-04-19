@@ -1,14 +1,14 @@
 if [[ $(type -t __git_ps1) != function ]]; then
-    __git_ps1 () {
-        format="${1:-%s}"
-        branch_name="$(git branch --show-current 2>/dev/null)"
-        if [[ -n $branch_name ]]; then
-            printf "$format" "$branch_name"
-            return 0
-        else
-            return 1
-        fi
-    }
+  __git_ps1 () {
+    format="${1:-%s}"
+    branch_name="$(git branch --show-current 2>/dev/null)"
+    if [[ -n $branch_name ]]; then
+      printf "$format" "$branch_name"
+      return 0
+    else
+      return 1
+    fi
+  }
 fi
 
 gray="\[\033[92m\]"

@@ -17,7 +17,7 @@
   pu = push -u
   s = status --short
   st = status
-unstage = restore --staged
+  unstage = restore --staged
   download = clone --depth 1 --recurse-submodules --shallow-submodules
   gone = ! git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D
   gr = log --graph --pretty=format:\"%Cred%h %Cblue%ar%Creset %Cgreen%an%Creset %s %Cred%d\"
@@ -36,6 +36,8 @@ unstage = restore --staged
   default = current
 [rerere]
   enabled = true
+[user]
+  name = Dmitry Barskov
 [includeIf "gitdir:~/work/"]
   path = work-profile.gitconfig
 [includeIf "gitdir:~/src/"]

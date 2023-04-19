@@ -13,13 +13,14 @@ export PATH="$XDG_RUNTIME_DIR:$PATH"
 
 export EDITOR='vim'
 
-[ -f "$XDG_CONFIG_HOME/homebrew.sh" ] && source "$XDG_CONFIG_HOME/homebrew.sh"
-[ -f "$XDG_CONFIG_HOME/aliases.sh" ] && source "$XDG_CONFIG_HOME/aliases.sh"
-[ -f "$XDG_CONFIG_HOME/macos-aliases.sh" ] && source "$XDG_CONFIG_HOME/macos-aliases.sh"
-[ -f "$XDG_CONFIG_HOME/git.zsh" ] && source "$XDG_CONFIG_HOME/git.zsh"
-[ -f "$XDG_CONFIG_HOME/nvm.bash" ] && source "$XDG_CONFIG_HOME/nvm.bash"
-[ -f "$XDG_CONFIG_HOME/java.sh" ] && source "$XDG_CONFIG_HOME/java.sh"
-[ -f "$XDG_CONFIG_HOME/ruby.bash" ] && source "$XDG_CONFIG_HOME/ruby.bash"
+source "$XDG_CONFIG_HOME/aliases.sh"
+source "$XDG_CONFIG_HOME/asdf.sh"
+source "$XDG_CONFIG_HOME/git.zsh"
+source "$XDG_CONFIG_HOME/homebrew.bash"
+source "$XDG_CONFIG_HOME/java.sh"
+source "$XDG_CONFIG_HOME/macos-aliases.bash"
+source "$XDG_CONFIG_HOME/nvm.bash"
+source "$XDG_CONFIG_HOME/ruby.bash"
 
 # Load autocomplete
 export FPATH="$XDG_DATA_HOME/zsh/site-functions:/usr/share/zsh/site-functions:/usr/share/zsh/$ZSH_VERSION/functions"

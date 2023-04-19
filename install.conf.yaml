@@ -36,3 +36,4 @@
           https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim',
         Installing vim-plug]
     - [vim +PlugInstall +qall, Installing vim plugins]
+    - [scripts/git-profiles.bash, Templating users for git]
