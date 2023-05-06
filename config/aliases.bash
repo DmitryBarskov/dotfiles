@@ -20,7 +20,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 if test -t 1 && test -n "$(tput colors)" && test "$(tput colors)" -ge 8; then
-  alias ls='ls --color=auto'
+  alias ls='ls --color'
   alias grep='grep --color=auto'
   alias fgrep='fgrep --color=auto'
   alias egrep='egrep --color=auto'
