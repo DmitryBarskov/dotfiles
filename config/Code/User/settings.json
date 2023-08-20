@@ -2,16 +2,13 @@
   "[html]": {
     "editor.tabSize": 2
   },
-  "[javascript][javascriptreact][ruby][gemfile]": {
-    "editor.tabSize": 2
-  },
-  "[json]": {
+  "[ruby][gemfile]": {
     "editor.tabSize": 2
   },
   "[markdown]": {
     "editor.tabSize": 2
   },
-  "[typescript][typescriptreact]": {
+  "[json][javascript][javascriptreact][typescript][typescriptreact]": {
     "editor.defaultFormatter": "vscode.typescript-language-features",
     "editor.tabSize": 2
   },
@@ -69,10 +66,15 @@
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.macOptionIsMeta": true,
-  "window.autoDetectColorScheme": true,
   "window.title": "${rootName} ${separator} ${activeEditorMedium}",
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Solarized Dark",
-  "workbench.preferredDarkColorTheme": "Solarized Dark",
-  "workbench.preferredLightColorTheme": "Solarized Light"
+  "code-runner.runInTerminal": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.colorTheme": "Default Dark+",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  }
 }
