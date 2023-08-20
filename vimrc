@@ -21,6 +21,8 @@ Plug 'rhysd/vim-crystal'
 Plug 'bkad/vim-terraform'
 Plug 'vim-scripts/javacomplete'
 " Plug 'craigemery/vim-autotag'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " Visual effects
@@ -63,8 +65,7 @@ set termencoding=utf-8
 set backspace=indent,eol,start whichwrap+=<,>,[,]
 set showtabline=1
 
-set wrap " wrap long lines, no horizontal scrolling
-" set linebreak
+set linebreak " wrap long lines, no horizontal scrolling (break bw words)
 set encoding=utf-8
 set fileencodings=utf8,cp1251
 

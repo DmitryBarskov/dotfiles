@@ -1,7 +1,6 @@
 # zmodload zsh/zprof # uncomment for profiling
 
 export XDG_CONFIG_HOME="$HOME/.config"
-source "$XDG_CONFIG_HOME/asdf.sh"
 
 # load homebrew first
 source "$XDG_CONFIG_HOME/homebrew.bash"
