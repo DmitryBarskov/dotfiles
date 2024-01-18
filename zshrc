@@ -1,6 +1,7 @@
 # zmodload zsh/zprof # uncomment for profiling
 
 export XDG_CONFIG_HOME="$HOME/.config"
+source "$XDG_CONFIG_HOME/env.bash"
 
 # load homebrew first
 source "$XDG_CONFIG_HOME/homebrew.bash"
@@ -20,5 +21,8 @@ bindkey '\t' complete-word
 
 # emacs mappings
 bindkey -e
+
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
 
 # zprof # uncomment for profiling

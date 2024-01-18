@@ -2,14 +2,19 @@
   "[html]": {
     "editor.tabSize": 2
   },
-  "[ruby][gemfile]": {
-    "editor.tabSize": 2
+  "[sql]": {
+    "editor.defaultFormatter": "mtxr.sqltools"
+  },
+  "rubyLsp.rubyVersionManager": "rbenv",
+  "[ruby][gemfile][erb]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "Shopify.ruby-lsp"
   },
   "[markdown]": {
     "editor.tabSize": 2
   },
   "[json][javascript][javascriptreact][typescript][typescriptreact]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.defaultFormatter": "denoland.vscode-deno",
     "editor.tabSize": 2
   },
   "breadcrumbs.enabled": false,
@@ -18,16 +23,12 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.dragAndDrop": false,
-  "editor.fontFamily": "'JetBrains Mono', Monaco, 'Courier New', monospace",
-  "editor.fontLigatures": false,
+  "editor.fontFamily": "Monaco, 'Courier New', monospace",
   "editor.fontSize": 12,
   "editor.inlineSuggest.enabled": true,
   "editor.largeFileOptimizations": false,
   "editor.minimap.enabled": false,
   "editor.mouseWheelZoom": false,
-  "editor.rulers": [
-    80
-  ],
   "editor.suggestSelection": "first",
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "editor.wordWrap": "on",
@@ -54,10 +55,6 @@
   "files.trimTrailingWhitespace": true,
   "git.autofetch": true,
   "git.confirmSync": false,
-  "githubPullRequests.pullBranch": "never",
-  "githubPullRequests.terminalLinksHandler": "github",
-  "gitlens.menus": false,
-  "gitlens.plusFeatures.enabled": false,
   "html.format.wrapLineLength": 80,
   "scm.autoReveal": false,
   "scm.inputFontFamily": "editor",
@@ -67,14 +64,21 @@
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.macOptionIsMeta": true,
   "window.title": "${rootName} ${separator} ${activeEditorMedium}",
-  "workbench.activityBar.visible": false,
   "code-runner.runInTerminal": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.colorTheme": "Default Dark+",
-  "github.copilot.enable": {
-    "*": false,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
-  }
+  "editor.cursorSurroundingLines": 1,
+  "[jsonc]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "window.commandCenter": false,
+  "editor.rulers": [
+    80,
+  ],
+  "workbench.activityBar.location": "hidden",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "workbench.editor.showTabs": "none",
+  "workbench.statusBar.visible": false,
 }

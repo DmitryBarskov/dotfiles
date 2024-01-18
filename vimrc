@@ -23,6 +23,7 @@ Plug 'vim-scripts/javacomplete'
 " Plug 'craigemery/vim-autotag'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'udalov/kotlin-vim'
 call plug#end()
 
 " Visual effects
