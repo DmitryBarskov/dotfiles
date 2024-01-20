@@ -8,3 +8,8 @@ config/sublime-text-3/*
 config/sublime-text-4/*
 config/VSCodium/*
 config/VSCodium/User/settings.json
+config/wireshark/
+config/nvim/plugin/
+config/tmux/plugins/
+config/dlv/
+config/exercism/

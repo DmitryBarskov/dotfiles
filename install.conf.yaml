@@ -35,11 +35,15 @@
     - ['curl -fLo ~/.vim/autoload/plug.vim --create-dirs
           https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim',
         Installing vim-plug]
-    - ['INSTALL_DIR="$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim";
+    - ['INSTALL_DIR="$XDG_DATA_HOME/nvim/site/pack/packer/start/packer.nvim";
           git -C "$INSTALL_DIR" pull ||
           git clone --depth 1 https://github.com/wbthomason/packer.nvim
             "$INSTALL_DIR"',
-        Install packer.nvim]
+        Installing packer.nvim]
+    - ['INSTALL_DIR="$XDG_CONFIG_HOME/tmux/plugins/tpm";
+          git -C "$INSTALL_DIR" pull ||
+          git clone https://github.com/tmux-plugins/tpm "$INSTALL_DIR"',
+        Installing tmux plugin manager]
     - [scripts/git-profiles.bash, Templating users for git]
     - [vim +PlugInstall +qall, Installing vim plugins]
     - [nvim +PackerSync +qall, Syncing packer]
