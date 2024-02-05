@@ -1,6 +1,7 @@
 config/Code/*
 config/configstore/
-config/git/*-profile.gitconfig
+config/git/*.profile.gitconfig
+config/git/profiles.gitconfig
 config/irb/irb_history
 config/iterm2/
 config/nvm/
