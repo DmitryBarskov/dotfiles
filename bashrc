@@ -9,6 +9,7 @@ case $- in
 esac
 
 export XDG_CONFIG_HOME="$HOME/.config"
+source "$XDG_CONFIG_HOME/env.bash"
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -92,7 +93,7 @@ fi
 source "$XDG_CONFIG_HOME/homebrew.bash"
 
 source "$XDG_CONFIG_HOME/aliases.bash"
-source "$XDG_CONFIG_HOME/asdf.sh"
+source "$XDG_CONFIG_HOME/asdf/load.sh"
 source "$XDG_CONFIG_HOME/git.bash"
 source "$XDG_CONFIG_HOME/java.bash"
 source "$XDG_CONFIG_HOME/nvm.bash"

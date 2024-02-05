@@ -1,5 +1,3 @@
-set -e
-
 installation_path="${XDG_DATA_HOME}"
 
 if [ -d "$installation_path/asdf" ]; then

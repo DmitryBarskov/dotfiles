@@ -38,10 +38,6 @@
   enabled = true
 [user]
   name = Dmitry Barskov
-[includeIf "gitdir:~/work/"]
-  path = work-profile.gitconfig
-[includeIf "gitdir:~/src/"]
-  path = personal-profile.gitconfig
 [merge]
   tool = vimdiff
 [init]
@@ -51,3 +47,5 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
+[include]
+  path = profiles.gitconfig
