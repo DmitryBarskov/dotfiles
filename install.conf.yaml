@@ -9,6 +9,7 @@
 
 - link:
     ~/.bashrc: bashrc
+    ~/.bash_profile: bash_profile
     ~/.zshrc: zshrc
     ~/.vimrc: vimrc
     ~/.config: config
