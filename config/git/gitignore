@@ -1,7 +1,9 @@
 .DS_Store
 *.swp
 tags
+.tags
 .#*
 \#*#
 *~
 .byebug_history
+.vscode
