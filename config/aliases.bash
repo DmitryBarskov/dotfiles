@@ -28,12 +28,9 @@ fi
 
 if [[ $(uname) == "Darwin" ]]; then
   alias mvim='open -a MacVim'
-  alias assume="source assume"
-
-  if [[ $(arch) == "arm64" ]]; then
-    alias ibrew='arch -x86_64 /usr/local/bin/brew'
-  fi
 fi
+
+alias dr="docker run -it --rm"
 
 if [[ $SHELL == *"bash" ]]; then
   alias reload='source ~/.bashrc'
