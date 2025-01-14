@@ -94,8 +94,16 @@ source "$XDG_CONFIG_HOME/homebrew.bash"
 
 source "$XDG_CONFIG_HOME/aliases.bash"
 source "$XDG_CONFIG_HOME/asdf/load.sh"
+source "$XDG_CONFIG_HOME/fzf.bash"
 source "$XDG_CONFIG_HOME/git.bash"
 source "$XDG_CONFIG_HOME/java.bash"
 source "$XDG_CONFIG_HOME/nvm.bash"
+source "$XDG_CONFIG_HOME/python.bash"
 source "$XDG_CONFIG_HOME/ruby.bash"
-source "$XDG_CONFIG_HOME/fzf.bash"
+export PATH="/Users/papuga/src/flutter/bin:$PATH"
+export CTAGS="--options=$XDG_CONFIG_HOME/ctags/config.ctags"
+
+export EDITOR="vim"
+
+# emacs mappings
+bindkey -e

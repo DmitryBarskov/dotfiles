@@ -1,0 +1,5 @@
+[gdrive-pwdb]
+type = drive
+scope = drive.file
+team_drive = 
+

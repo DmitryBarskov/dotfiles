@@ -7,6 +7,5 @@ if [[ $(uname) == "Darwin" ]]; then
     brew_location=/usr/local/bin
   fi
 
-  export PATH="$brew_location:$PATH"
   eval "$($brew_location/brew shellenv)"
 fi

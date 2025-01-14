@@ -4,3 +4,6 @@
 --exclude=cdk.out
 --exclude=public
 --exclude=vendor
+--exclude=tmp
+--exclude=coverage
+--exclude=spec

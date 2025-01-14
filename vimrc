@@ -6,24 +6,20 @@ runtime macros/matchit.vim
 
 " plugins
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'kien/ctrlp.vim'
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-" Plug 'jpalardy/vim-slime'
-Plug 'kana/vim-textobj-user'
-Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'posva/vim-vue'
-Plug 'morhetz/gruvbox'
-Plug 'rhysd/vim-crystal'
-Plug 'bkad/vim-terraform'
-Plug 'vim-scripts/javacomplete'
-" Plug 'craigemery/vim-autotag'
+Plug 'elixir-lang/vim-elixir'
+Plug 'jpalardy/vim-slime'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'udalov/kotlin-vim'
+Plug 'kana/vim-textobj-user'
+Plug 'kien/ctrlp.vim'
+Plug 'mechatroner/rainbow_csv'
+Plug 'morhetz/gruvbox'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
 " Visual effects
@@ -53,7 +49,7 @@ set smarttab " insert <shiftwidth> whiespaces on <Tab>
 set softtabstop=2 " 2 whitespaces used for <Tab>
 set expandtab " use spaces for >> and <Tab>
 filetype indent on
-set tags=tags
+set tags=.tags,tags
 
 " Remove trailing whitespaces
 autocmd BufWritePre *.rb normal m`:%s/\s\+$//e ``
@@ -85,10 +81,10 @@ let g:ctrlp_clear_cache_on_exit = 0 " persist cache of CTRL-P between sessions
 let g:ctrlp_cache_dir = $XDG_CACHE_HOME.'/ctrlp' " where to store CTRL-P cache
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
 
-set shell=/bin/zsh\ -l
+set shell=/bin/zsh\ -li
 
+colorscheme gruvbox
+set background=dark
 if has("gui_macvim")
-  colorscheme gruvbox
-  set background=dark
   set guifont=Monaco:h13
 endif

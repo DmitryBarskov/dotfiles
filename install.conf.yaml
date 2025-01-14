@@ -11,6 +11,7 @@
     ~/.bashrc: bashrc
     ~/.bash_profile: bash_profile
     ~/.zshrc: zshrc
+    ~/.zprofile: zprofile
     ~/.vimrc: vimrc
     ~/.config: config
     ~/.config/VSCodium/User/settings.json: config/Code/User/settings.json
@@ -47,5 +48,3 @@
         Installing tmux plugin manager]
     - [vim +PlugInstall +qall, Installing vim plugins]
     - [nvim +PackerSync +qall, Syncing packer]
-    - ['source config/asdf/load.sh && asdf > /dev/null && bash -c config/asdf/setup.sh',
-        Installing asdf]
