@@ -99,3 +99,5 @@ source "$XDG_CONFIG_HOME/java.bash"
 source "$XDG_CONFIG_HOME/nvm.bash"
 source "$XDG_CONFIG_HOME/ruby.bash"
 source "$XDG_CONFIG_HOME/fzf.bash"
+
+export CTAGS="--options=$XDG_CONFIG_HOME/ctags/config.ctags"
