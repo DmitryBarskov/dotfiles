@@ -2,9 +2,6 @@
   "[html]": {
     "editor.tabSize": 2
   },
-  "[sql]": {
-    "editor.defaultFormatter": "mtxr.sqltools"
-  },
   "[ruby][gemfile][erb]": {
     "editor.tabSize": 2,
   },
@@ -61,9 +58,7 @@
   "window.title": "${activeFolderMedium}/${activeEditorShort} ${separator} ${rootName}",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "editor.cursorSurroundingLines": 1,
-  "editor.rulers": [
-    80,
-  ],
+  "editor.rulers": [80, 100],
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
@@ -71,7 +66,7 @@
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "workbench.colorTheme": "Solarized Dark",
+  "workbench.colorTheme": "Spinel",
   "window.commandCenter": false,
   "window.dialogStyle": "custom",
   "standardRuby.autofix": false,
@@ -82,15 +77,11 @@
   "workbench.activityBar.location": "hidden",
   "vscode-graphql-execution.debug": true,
   "tabnine.experimentalAutoImports": true,
-  "terminal.integrated.enableMultiLinePasteWarning": false,
-  "yaml.schemas": {
-    "file:///home/ubuntu/.vscode-server/extensions/docsmsft.docs-yaml-1.0.5/dist/toc.schema.json": "/toc\\.yml/i"
-  },
-  "dart.flutterSdkPath": "/Users/papuga/src/flutter",
-  "rubyLsp.rubyExecutablePath": "/home/ubuntu/.local/share/asdf/installs/ruby/3.3.5/bin/ruby",
-  "[ruby]": {
-    "editor.defaultFormatter": "testdouble.vscode-standard-ruby"
-  },
   "docsYaml.telemetry.enableTelemetry": false,
   "redhat.telemetry.enabled": false,
+  "git.openRepositoryInParentFolders": "never",
+  "diffEditor.codeLens": true,
+  "yaml.schemas": {
+    "file:///Users/papuga/.vscode/extensions/docsmsft.docs-yaml-1.0.5/dist/toc.schema.json": "/toc\\.yml/i"
+  },
 }

@@ -7,13 +7,9 @@ source "$XDG_CONFIG_HOME/env.bash"
 source "$XDG_CONFIG_HOME/homebrew.bash"
 
 source "$XDG_CONFIG_HOME/aliases.bash"
-source "$XDG_CONFIG_HOME/asdf/load.sh"
+source "$XDG_CONFIG_HOME/asdf.sh"
 source "$XDG_CONFIG_HOME/fzf.bash"
 source "$XDG_CONFIG_HOME/git.zsh"
-source "$XDG_CONFIG_HOME/java.bash"
-source "$XDG_CONFIG_HOME/nvm.bash"
-source "$XDG_CONFIG_HOME/python.bash"
-source "$XDG_CONFIG_HOME/ruby.bash"
 export PATH="/Users/papuga/src/flutter/bin:$PATH"
 
 # Load autocomplete

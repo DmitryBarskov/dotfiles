@@ -48,3 +48,10 @@
         Installing tmux plugin manager]
     - [vim +PlugInstall +qall, Installing vim plugins]
     - [nvim +PackerSync +qall, Syncing packer]
+    - ['asdf plugin add erlang;
+          asdf plugin add elixir;
+          asdf plugin add nodejs;
+          asdf plugin add ruby;
+          asdf plugin add java https://github.com/halcyon/asdf-java.git;
+          asdf plugin add python',
+        Installing asdf plugins]

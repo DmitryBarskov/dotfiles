@@ -7,10 +7,6 @@ runtime macros/matchit.vim
 " plugins
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
-Plug 'elixir-lang/vim-elixir'
-Plug 'jpalardy/vim-slime'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'kana/vim-textobj-user'
 Plug 'kien/ctrlp.vim'
 Plug 'mechatroner/rainbow_csv'
@@ -18,7 +14,6 @@ Plug 'morhetz/gruvbox'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
