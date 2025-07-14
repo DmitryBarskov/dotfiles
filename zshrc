@@ -1,10 +1,6 @@
 # zmodload zsh/zprof # uncomment for profiling
 
-export XDG_CONFIG_HOME="$HOME/.config"
-source "$XDG_CONFIG_HOME/env.bash"
-
-# load homebrew first
-source "$XDG_CONFIG_HOME/homebrew.bash"
+# Note that .zprofile is loaded before this
 
 source "$XDG_CONFIG_HOME/aliases.bash"
 source "$XDG_CONFIG_HOME/asdf.sh"
