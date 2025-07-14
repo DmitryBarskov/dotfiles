@@ -30,10 +30,10 @@ if [[ $(uname) == "Darwin" ]]; then
   alias mvim='open -a MacVim'
 fi
 
-alias dr="docker run -it --rm"
-
 if [[ $SHELL == *"bash" ]]; then
-  alias reload='source ~/.bashrc'
+    alias reload='source ~/.bash_profile'
 elif [[ $SHELL == *"zsh" ]]; then
-  alias reload='source ~/.zshrc'
+    alias reload='source ~/.zshrc && source ~/.zprofile'
+else
+    alias reload='echo unsupported shell'
 fi
