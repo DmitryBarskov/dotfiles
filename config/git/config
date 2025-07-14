@@ -29,7 +29,6 @@
   excludesFile = ~/.config/git/gitignore
   autocrlf = input
 [credential]
-  helper = osxkeychain
 [pull]
   rebase = false
 [push]
