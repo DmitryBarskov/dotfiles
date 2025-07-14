@@ -20,6 +20,4 @@ export HISTFILE="$XDG_STATE_HOME/history"
 export HISTSIZE=1000
 export HISTFILESIZE=2000
 
-export EDITOR="vim"
-
 export DOCKER_HIDE_LEGACY_COMMANDS=true

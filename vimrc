@@ -6,26 +6,15 @@ runtime macros/matchit.vim
 
 " plugins
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'kien/ctrlp.vim'
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-" Plug 'jpalardy/vim-slime'
-Plug 'elixir-editors/vim-elixir'
-
 Plug 'kana/vim-textobj-user'
-Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'posva/vim-vue'
+Plug 'kien/ctrlp.vim'
+Plug 'mechatroner/rainbow_csv'
 Plug 'morhetz/gruvbox'
-Plug 'rhysd/vim-crystal'
-Plug 'bkad/vim-terraform'
-Plug 'vim-scripts/javacomplete'
-" Plug 'craigemery/vim-autotag'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'udalov/kotlin-vim'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'tpope/vim-fugitive'
+Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
 " Visual effects
@@ -86,6 +75,8 @@ let g:ctrlp_clear_cache_on_exit = 0 " persist cache of CTRL-P between sessions
 " use F5 in CTRL-P menu to clear cache
 let g:ctrlp_cache_dir = $XDG_CACHE_HOME.'/ctrlp' " where to store CTRL-P cache
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
+
+set shell=/usr/bin/bash\ -li
 
 colorscheme gruvbox
 set background=dark
