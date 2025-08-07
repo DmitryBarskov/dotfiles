@@ -58,30 +58,51 @@
   "window.title": "${activeFolderMedium}/${activeEditorShort} ${separator} ${rootName}",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "editor.cursorSurroundingLines": 1,
-  "editor.rulers": [80, 100],
+  "editor.rulers": [80, 100, 120],
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "workbench.editor.wrapTabs": true,
+  "workbench.editor.wrapTabs": false,
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "workbench.colorTheme": "Spinel",
   "window.commandCenter": false,
   "window.dialogStyle": "custom",
-  "standardRuby.autofix": false,
-  "standardRuby.mode": "onlyRunGlobally",
   "workbench.sideBar.location": "right",
   "editor.multiCursorModifier": "ctrlCmd",
   "accessibility.dimUnfocused.enabled": true,
   "workbench.activityBar.location": "hidden",
-  "vscode-graphql-execution.debug": true,
-  "tabnine.experimentalAutoImports": true,
   "docsYaml.telemetry.enableTelemetry": false,
   "redhat.telemetry.enabled": false,
   "git.openRepositoryInParentFolders": "never",
   "diffEditor.codeLens": true,
   "yaml.schemas": {
-    "file:///Users/papuga/.vscode/extensions/docsmsft.docs-yaml-1.0.5/dist/toc.schema.json": "/toc\\.yml/i"
+    "file:///Users/papuga/.vscode/extensions/atlassian.atlascode-3.8.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml",
+    "file:///home/vscode/.vscode-server/extensions/docsmsft.docs-yaml-1.0.5/dist/toc.schema.json": "/toc\\.yml/i"
   },
+  "workbench.layoutControl.enabled": false,
+  "chat.commandCenter.enabled": false,
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.vsix": "default"
+  },
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "ruby-eval.rubyVersion": "3.2",
+  "github.copilot.enable": {
+    "*": false
+  },
+  "editor.accessibilitySupport": "off",
+  "docker.extension.enableComposeLanguageServer": false,
+  "accessibility.underlineLinks": true,
+  "python.analysis.typeCheckingMode": "standard",
+  "git.blame.editorDecoration.enabled": true,
+  "telemetry.feedback.enabled": false,
+  "chat.agent.enabled": false,
+  "chat.sendElementsToChat.attachCSS": false,
+  "chat.sendElementsToChat.attachImages": false,
+  "chat.sendElementsToChat.enabled": false,
+  "chat.detectParticipant.enabled": false,
+  "rubyLsp.featureFlags": {
+    "fullTestDiscovery": true
+  }
 }
