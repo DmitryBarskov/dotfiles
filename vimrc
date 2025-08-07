@@ -76,7 +76,7 @@ let g:ctrlp_clear_cache_on_exit = 0 " persist cache of CTRL-P between sessions
 let g:ctrlp_cache_dir = $XDG_CACHE_HOME.'/ctrlp' " where to store CTRL-P cache
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
 
-set shell=/usr/bin/bash\ -li
+set shell=/bin/bash\ -li
 
 colorscheme gruvbox
 set background=dark
