@@ -40,7 +40,7 @@ esac
 source "$XDG_CONFIG_HOME/homebrew.bash"
 
 source "$XDG_CONFIG_HOME/aliases.bash"
-source "$XDG_CONFIG_HOME/asdf.sh"
+eval "$(mise activate bash)"
 source "$XDG_CONFIG_HOME/fzf.bash"
 source "$XDG_CONFIG_HOME/git.bash"
 

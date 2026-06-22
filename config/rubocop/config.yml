@@ -1,0 +1,106 @@
+require:
+  <% if `gem list -i rubocop-rails`.chomp == 'true' %>
+  - rubocop-rails
+  <% end %>
+  <% if `gem list -i rubocop-factory_bot`.chomp == 'true' %>
+  - rubocop-factory_bot
+  <% end %>
+  <% if `gem list -i rubocop-graphql`.chomp == 'true' %>
+  - rubocop-graphql
+  <% end %>
+  <% if `gem list -i rubocop-rails`.chomp == 'true' %>
+  - rubocop-rails
+  <% end %>
+  <% if `gem list -i rubocop-rake`.chomp == 'true' %>
+  - rubocop-rake
+  <% end %>
+  <% if `gem list -i rubocop-rspec`.chomp == 'true' %>
+  - rubocop-rspec
+  <% end %>
+  <% if `gem list -i rubocop-rspec_rails`.chomp == 'true' %>
+  - rubocop-rspec_rails
+  <% end %>
+  <% if `gem list -i rubocop-performance`.chomp == 'true' %>
+  - rubocop-performance
+  <% end %>
+
+AllCops:
+  DisplayCopNames: true
+  NewCops: enable
+
+Layout/ArgumentAlignment:
+  Enabled: true
+  EnforcedStyle: with_fixed_indentation
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+  SupportedStyles:
+    - with_first_parameter
+    - with_fixed_indentation
+
+Layout/LineLength:
+  Max: 80
+
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
+  SupportedStylesAlignWith:
+    - keyword
+    - variable
+
+Layout/HashAlignment:
+  EnforcedLastArgumentHashStyle: ignore_implicit
+
+Lint/AmbiguousBlockAssociation:
+  Exclude: []
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
+Metrics/BlockLength:
+  Enabled: true
+
+Metrics/ClassLength:
+  Max: 50
+
+Naming/PredicateName:
+  Enabled: true
+
+Naming/VariableNumber:
+  Enabled: true
+
+Style/AndOr:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: true
+
+Style/HashSyntax:
+  Enabled: true
+
+Style/MethodCalledOnDoEndBlock:
+  Enabled: true
+
+Style/CollectionMethods:
+  Enabled: true
+
+Style/SymbolArray:
+  Enabled: true
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+  ConsistentQuotesInMultiline: true
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+  SupportedStyles:
+    - compact
+    - expanded
+
+Style/FrozenStringLiteralComment:
+  Enabled: true

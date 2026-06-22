@@ -49,3 +49,4 @@ if ! shopt -oq posix; then
 fi
 
 export EDITOR="vim"
+export TERM=xterm-256color

@@ -4,7 +4,6 @@
 # Note that .zprofile is loaded before this
 
 source "$XDG_CONFIG_HOME/aliases.bash"
-source "$XDG_CONFIG_HOME/asdf.sh"
 source "$XDG_CONFIG_HOME/fzf.bash"
 source "$XDG_CONFIG_HOME/git.zsh"
 
@@ -18,5 +17,6 @@ export CTAGS="--options=$XDG_CONFIG_HOME/ctags/config.ctags"
 
 # emacs mappings
 bindkey -e
+eval "$(mise activate zsh)"
 
 # zprof # uncomment for profiling

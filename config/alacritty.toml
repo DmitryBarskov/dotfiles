@@ -1,0 +1,8 @@
+[window]
+decorations = "Full" # "Full" | "None" | "Transparent" | "Buttonless"
+dynamic_padding = false
+padding = { x = 3, y = 3 }
+option_as_alt = "OnlyLeft"
+
+[font]
+size = 13

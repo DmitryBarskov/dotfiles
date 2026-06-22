@@ -1,0 +1,7 @@
+[settings]
+
+[settings.ruby]
+compile = false
+
+[tools]
+ruby = "4.0.5"

@@ -4,4 +4,86 @@
         "key": "cmd+[IntlBackslash]",
         "command": "workbench.action.terminal.toggleTerminal"
     },
+    // vvv disable shortcuts conflicting with MacOS tiling
+    {
+        "key": "ctrl+pageup",
+        "command": "-extension.vim_ctrl+pageup",
+        "when": "editorTextFocus && vim.active && vim.use<C-pageup> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+pageup",
+        "command": "-notebook.focusPreviousEditor",
+        "when": "accessibilityModeEnabled && notebookCellEditorFocused"
+    },
+    {
+        "key": "ctrl+pageup",
+        "command": "-notebook.focusNextEditor",
+        "when": "accessibilityModeEnabled && notebookCellEditorFocused"
+    },
+    {
+        "key": "ctrl+pageup",
+        "command": "-quickInput.pagePrevious",
+        "when": "inQuickInput && quickInputType == 'quickPick' || inQuickInput && quickInputType == 'quickTree'"
+    },
+    {
+        "key": "ctrl+pageup",
+        "command": "-scrollLineUp",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+home",
+        "command": "-quickInput.first",
+        "when": "inQuickInput && quickInputType == 'quickPick' || inQuickInput && quickInputType == 'quickTree'"
+    },
+    {
+        "key": "ctrl+home",
+        "command": "-extension.vim_ctrl+home",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+end",
+        "command": "-extension.vim_ctrl+end",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+end",
+        "command": "-quickInput.last",
+        "when": "inQuickInput && quickInputType == 'quickPick' || inQuickInput && quickInputType == 'quickTree'"
+    },
+    {
+        "key": "ctrl+pagedown",
+        "command": "-scrollLineDown",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+pagedown",
+        "command": "-quickInput.pageNext",
+        "when": "inQuickInput && quickInputType == 'quickPick' || inQuickInput && quickInputType == 'quickTree'"
+    },
+    {
+        "key": "ctrl+pagedown",
+        "command": "-extension.vim_ctrl+pagedown",
+        "when": "editorTextFocus && vim.active && vim.use<C-pagedown> && !inDebugRepl"
+    },
+    // ^^^ disable shortcuts conflicting with MacOS tiling
+    // {
+    //     "key": "shift+cmd+l",
+    //     "command": "workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
+    //     "when": "!activeEditorGroupEmpty"
+    // },
+    // {
+    //     "key": "ctrl+shift+tab",
+    //     "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
+    //     "when": "!activeEditorGroupEmpty"
+    // },
+    // {
+    //     "key": "shift+cmd+l",
+    //     "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+    //     "when": "!activeEditorGroupEmpty"
+    // },
+    // {
+    //     "key": "ctrl+tab",
+    //     "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+    //     "when": "!activeEditorGroupEmpty"
+    // },
 ]

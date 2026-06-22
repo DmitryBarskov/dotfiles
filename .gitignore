@@ -36,3 +36,5 @@ config/sublime-text-4/Packages/*
 !config/sublime-text-4/Packages/User/
 config/sublime-text-4/Packages/User/*
 config/sublime-text-4/Packages/User/Preferences.sublime-settings
+
+go/

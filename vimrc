@@ -4,7 +4,7 @@ filetype off
 
 runtime macros/matchit.vim
 
-" plugins
+" Find plugins on https://vimawesome.com
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'kana/vim-textobj-user'
@@ -76,10 +76,12 @@ let g:ctrlp_clear_cache_on_exit = 0 " persist cache of CTRL-P between sessions
 let g:ctrlp_cache_dir = $XDG_CACHE_HOME.'/ctrlp' " where to store CTRL-P cache
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
 
-set shell=/bin/bash\ -li
+set shell=/bin/bash
+" set shell=/bin/zsh
 
 colorscheme gruvbox
 set background=dark
 if has("gui_macvim")
   set guifont=Monaco:h13
+  set guioptions+=!
 endif
