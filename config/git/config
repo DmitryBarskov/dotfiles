@@ -29,7 +29,6 @@
 [core]
   excludesFile = ~/.config/git/gitignore
   autocrlf = input
-[credential]
 [pull]
   rebase = false
 [push]

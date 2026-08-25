@@ -3,9 +3,11 @@
 # Loaded for login shells
 # Note that .zprofile is loaded before this
 
+export XDG_CONFIG_HOME="$HOME/.config"
 source "$XDG_CONFIG_HOME/aliases.bash"
 source "$XDG_CONFIG_HOME/fzf.bash"
 source "$XDG_CONFIG_HOME/git.zsh"
+source "$XDG_CONFIG_HOME/homebrew.bash"
 
 # Load autocomplete
 export FPATH="$XDG_DATA_HOME/zsh/site-functions:/usr/share/zsh/site-functions:/usr/share/zsh/$ZSH_VERSION/functions"

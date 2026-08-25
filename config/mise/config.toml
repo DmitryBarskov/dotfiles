@@ -4,4 +4,6 @@
 compile = false
 
 [tools]
+java = "25.0.2"
+python = "latest"
 ruby = "4.0.5"
