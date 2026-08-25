@@ -4,6 +4,14 @@ filetype off
 
 runtime macros/matchit.vim
 
+" Install vim-plug https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
+if has('nvim')
+  " I don't want vim-plug for nvim
+elseif empty(glob('~/.vim/autoload/plug.vim'))
+  silent execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " Find plugins on https://vimawesome.com
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
