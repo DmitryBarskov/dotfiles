@@ -4,26 +4,14 @@ filetype off
 
 runtime macros/matchit.vim
 
-" Install vim-plug https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
-if has('nvim')
-  " I don't want vim-plug for nvim
-elseif empty(glob('~/.vim/autoload/plug.vim'))
-  silent execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
+" Find plugins on https://vimawesome.com and add them as git modules to
+" dotfiles/config/vim/pack/plugins/start/. "$XDG_DATA_CONFIG" path should be
+" an alias to dotfiles/config.
 
-" Find plugins on https://vimawesome.com
-call plug#begin('~/.vim/plugged')
-Plug 'airblade/vim-gitgutter'
-Plug 'kana/vim-textobj-user'
-Plug 'kien/ctrlp.vim'
-Plug 'mechatroner/rainbow_csv'
-Plug 'morhetz/gruvbox'
-Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'tpope/vim-fugitive'
-Plug 'vim-ruby/vim-ruby'
-call plug#end()
+" ^N for opening Nerd tree
+nnoremap <C-N> :NERDTreeToggle<CR>
+" ^\ for revealing focues file in Nerd tree
+nnoremap <C-\> :NERDTreeFind<CR>
 
 " Visual effects
 syntax on " syntax highlighting
@@ -41,6 +29,7 @@ set t_vb= " the effect instead of beeping (empty for no effect)
 " Behavior
 set hidden " store changes in buffers
 set ignorecase " ignore case for search
+set incsearch " highlight search as you type
 set smartcase " do not ignore case if query contains uppercase letters
 set backspace=indent,eol,start
 set autoindent " follow indent of the previous line
@@ -53,11 +42,15 @@ set softtabstop=2 " 2 whitespaces used for <Tab>
 set expandtab " use spaces for >> and <Tab>
 filetype indent on
 set tags=.tags,tags
+set noswapfile " do not create .swp files
+let mapleader = "'"
 
 " Remove trailing whitespaces
 autocmd BufWritePre *.rb normal m`:%s/\s\+$//e ``
 autocmd BufWritePre *.ts normal m`:%s/\s\+$//e ``
 autocmd BufWritePre *.js normal m`:%s/\s\+$//e ``
+autocmd BufWritePre *.java normal m`:%s/\s\+$//e ``
+autocmd BufWritePre *.ex normal m`:%s/\s\+$//e ``
 
 set mousehide " hide cursor when typing
 set mouse=a " suppot for mouse navigation
@@ -72,22 +65,20 @@ set fileencodings=utf8,cp1251
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 set clipboard=unnamed
 
-" ^N for opening Nerd tree
-nnoremap <C-N> :NERDTreeToggle<CR>
-" ^\ for revealing focues file in Nerd tree
-nnoremap <C-\> :NERDTreeFind<CR>
-
+" common typo
 iabbrev saerch search
 
 let g:ctrlp_clear_cache_on_exit = 0 " persist cache of CTRL-P between sessions
 " use F5 in CTRL-P menu to clear cache
-let g:ctrlp_cache_dir = $XDG_CACHE_HOME.'/ctrlp' " where to store CTRL-P cache
+
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
 
-set shell=/bin/bash
-" set shell=/bin/zsh
+try
+  colorscheme gruvbox
+catch /^Vim\%((\a\+)\)\=:E185/
+  " no gruvbox
+endtry
 
-colorscheme gruvbox
 set background=dark
 if has("gui_macvim")
   set guifont=Monaco:h13

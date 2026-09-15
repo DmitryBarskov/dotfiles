@@ -11,8 +11,6 @@
     ~/.bashrc: bashrc
     ~/.bash_profile: bash_profile
     ~/.zshrc: zshrc
-    ~/.zprofile: zprofile
-    ~/.vimrc: vimrc
     ~/.config:
       path: config
       force: true
@@ -36,14 +34,7 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-    - ['INSTALL_DIR="$XDG_DATA_HOME/nvim/site/pack/packer/start/packer.nvim";
-          git -C "$INSTALL_DIR" pull ||
-          git clone --depth 1 https://github.com/wbthomason/packer.nvim
-            "$INSTALL_DIR"',
-        Installing packer.nvim]
     - ['INSTALL_DIR="$XDG_CONFIG_HOME/tmux/plugins/tpm";
           git -C "$INSTALL_DIR" pull ||
           git clone https://github.com/tmux-plugins/tpm "$INSTALL_DIR"',
         Installing tmux plugin manager]
-    - [vim +PlugInstall +qall, Installing vim plugins]
-    - [nvim +PackerSync +qall, Syncing packer]

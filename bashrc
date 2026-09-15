@@ -9,7 +9,7 @@ case $- in
 esac
 
 export XDG_CONFIG_HOME="$HOME/.config"
-source "$XDG_CONFIG_HOME/env.bash"
+source "$XDG_CONFIG_HOME/env.sh"
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -37,11 +37,9 @@ case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
 
-source "$XDG_CONFIG_HOME/homebrew.bash"
+source "$XDG_CONFIG_HOME/homebrew.sh"
 
 source "$XDG_CONFIG_HOME/aliases.bash"
 command -v mise >/dev/null && eval "$(mise activate bash)"
 source "$XDG_CONFIG_HOME/fzf.bash"
 source "$XDG_CONFIG_HOME/git.bash"
-
-export CTAGS="--options=$XDG_CONFIG_HOME/ctags/config.ctags"

@@ -1,0 +1,8 @@
+{
+  "trustedcasks": [
+    "alexstrnik/browserino/browserino"
+  ],
+  "trustedformulae": [
+    "heroku/brew/heroku"
+  ]
+}
