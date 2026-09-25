@@ -7,4 +7,4 @@ update-submodules:
 	git submodule update --init --remote
 
 lint:
-	shellcheck -x zshrc bashrc config/*.sh config/*.bash
+	shellcheck -x zshenv zshrc bashrc config/*.sh config/*.bash config/*.zsh

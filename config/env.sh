@@ -15,6 +15,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export HISTFILE="$XDG_STATE_HOME/history"
 export HISTSIZE=1000
 export HISTFILESIZE=2000
+export SAVEHIST=1000
 
 export DOCKER_HIDE_LEGACY_COMMANDS=true
 
