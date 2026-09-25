@@ -1,9 +1,10 @@
---exclude=.git
---exclude=node_modules
 --exclude=.bundle
+--exclude=.git
 --exclude=cdk.out
---exclude=public
---exclude=vendor
---exclude=tmp
 --exclude=coverage
+--exclude=node_modules
+--exclude=public
 --exclude=spec
+--exclude=tmp
+--exclude=vendor
+--extra=+q
