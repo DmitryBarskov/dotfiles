@@ -34,5 +34,3 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-    - [ln -sf ./kitty-themes/themes/Solarized_Dark.conf ~/.config/kitty/theme.conf,
-        Setting kitty color scheme to Solarized_Dark]
