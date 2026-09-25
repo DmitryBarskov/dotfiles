@@ -3,6 +3,11 @@
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
 
+# kitty terminal color schemes
+[submodule "config/kitty/kitty-themes"]
+	path = config/kitty/kitty-themes
+	url = git@github.com:dexpota/kitty-themes.git
+
 # vim plugins below
 [submodule "config/vim/pack/plugins/start/nerdtree"]
 	path = config/vim/pack/plugins/start/nerdtree
@@ -34,6 +39,3 @@
 [submodule "config/vim/pack/plugins/start/vim-elixir"]
 	path = config/vim/pack/plugins/start/vim-elixir
 	url = https://github.com/elixir-editors/vim-elixir.git
-[submodule "config/kitty/kitty-themes"]
-	path = config/kitty/kitty-themes
-	url = git@github.com:dexpota/kitty-themes.git

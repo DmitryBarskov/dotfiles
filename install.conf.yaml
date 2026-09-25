@@ -38,3 +38,5 @@
           git -C "$INSTALL_DIR" pull ||
           git clone https://github.com/tmux-plugins/tpm "$INSTALL_DIR"',
         Installing tmux plugin manager]
+    - [ln -sf ./kitty-themes/themes/Solarized_Dark.conf ~/.config/kitty/theme.conf,
+        Setting kitty color scheme to Solarized_Dark]
